@@ -1,3 +1,11 @@
+html {
+  font-size: 14px;
+}
+
+.form-control {
+  font-size: inherit;
+}
+
 html, body {
   height: 100%;
   overflow: auto;
