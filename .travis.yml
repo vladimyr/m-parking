@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - node
+
+script:
+  - npm run lint
+  - npm run build
+
+deploy:
+  provider: surge
+  project: ./dist/
+  domain: https://mparking.surge.sh
+  skip_cleanup: true

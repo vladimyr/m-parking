@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  overflow: auto;
+}
+
+.container {
+  display: flex;
+  min-height: 100%;
+}
+
+.form {
+  align-self: flex-end;
+  max-width: 30rem;
+  margin: 1.5rem auto;
+}
+
+.github-corner > svg {
+  fill: #757575 !important;
+}
