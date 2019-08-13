@@ -6,11 +6,14 @@ const registrationInput = document.querySelector('#registration-number');
 const cityPicker = document.querySelector('#city');
 const zonePicker = document.querySelector('#zone');
 
+registrationInput.value = localStorage.getItem('registration');
+
 onSelectCity('split');
 cityPicker.addEventListener('change', e => onSelectCity(e.target.value));
 
 form.addEventListener('submit', e => {
   e.preventDefault();
+  localStorage.setItem('registration', registrationInput.value);
   const body = normalize(registrationInput.value);
   const phone = zonePicker.value;
   const url = smsLink({ phone, body });
